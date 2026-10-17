@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes - Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>QuickNotes</h1>
+      <p>Capture ideas before they disappear.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="editor-card">
+        <label for="note-text">Your note:</label>
+        <textarea
+          id="note-text"
+          rows="8"
+          placeholder="Start typing your note here..."
+        ></textarea>
+
+        <div class="counter-group">
+          <p id="char-count">0 / 200 characters</p>
+          <p id="word-count">0 words</p>
+        </div>
+
+        <div class="action-buttons">
+          <button type="button" id="clear-btn">Clear</button>
+          <button type="button" id="theme-toggle">Dark mode</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+    </footer>
+  </body>
+</html>
