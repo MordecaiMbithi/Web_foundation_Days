@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5 - User Directory</title>
+    <script src="users.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>User Directory</h1>
+    </header>
+
+    <main>
+      <section>
+        <button id="load-users" type="button">Load Users</button>
+      </section>
+
+      <section>
+        <label for="filter-input">Filter by name:</label>
+        <input
+          type="text"
+          id="filter-input"
+          placeholder="Type a name to search..."
+          disabled
+        />
+      </section>
+
+      <section>
+        <p id="status">Click "Load Users" to retrieve the user list.</p>
+        <ul id="users-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+    </footer>
+  </body>
+</html>
