@@ -1,0 +1,174 @@
+/* 1. Base Variables & Box Sizing Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f0f4f8;
+  --card-bg: #ffffff;
+  --text-color: #2d3748;
+  --muted-text: #718096;
+  --border-color: #cbd5e0;
+  --primary-color: #3182ce;
+  --primary-hover: #2b6cb0;
+  --header-bg: #2b6cb0;
+  --header-text: #ffffff;
+}
+
+body.dark {
+  --bg-color: #1a202c;
+  --card-bg: #2d3748;
+  --text-color: #f7fafc;
+  --muted-text: #a0aec0;
+  --border-color: #4a5568;
+  --primary-color: #4299e1;
+  --primary-hover: #3182ce;
+  --header-bg: #171923;
+  --header-text: #edf2f7;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 2. Header & Nav */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 3. Main Editor Layout */
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.editor-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+textarea#note-text {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  resize: vertical;
+}
+
+textarea#note-text:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
+}
+
+/* 4. Character & Word Counters */
+.counter-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--muted-text);
+}
+
+.counter-group p {
+  margin: 0;
+}
+
+/* Counter Alert Classes */
+.warning {
+  color: #dd6b20 !important;
+}
+
+.over {
+  color: #e53e3e !important;
+  font-weight: bold;
+}
+
+/* 5. Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button#clear-btn {
+  background-color: #718096;
+}
+
+button#clear-btn:hover {
+  background-color: #4a5568;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted-text);
+  font-size: 0.9rem;
+}
